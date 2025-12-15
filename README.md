@@ -7,11 +7,23 @@ Minimal FastAPI MVP that:
 - emits a toy KVDT text file with fixed width records
 
 ## Quick start
+
+### Backend (FastAPI)
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
+
+### Frontend (React/Vite)
+In a separate terminal:
+```bash
+cd praxis-doc-aid
+npm install
+npm run dev
+```
+
+The frontend will be available at `http://localhost:8080` and will connect to the backend API at `http://localhost:8000`.
 
 ## Endpoints
 - POST /extract — run LLM or stub to produce structured codes
