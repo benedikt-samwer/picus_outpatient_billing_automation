@@ -11,6 +11,8 @@ import {
   Stethoscope,
   Clock,
   Users,
+  ExternalLink,
+  Linkedin,
 } from "lucide-react";
 
 const Landing = () => {
@@ -249,6 +251,35 @@ const Landing = () => {
         </div>
       </section>
 
+      {/* About / Creator Section */}
+      <section className="py-12 px-4 bg-muted/50">
+        <div className="max-w-2xl mx-auto text-center space-y-4">
+          <p className="text-sm text-muted-foreground">
+            Created by <span className="font-semibold text-foreground">Benedikt Samwer</span>
+          </p>
+          <div className="flex items-center justify-center gap-4">
+            <a
+              href="https://samwer.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-hover transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              samwer.ai
+            </a>
+            <a
+              href="https://linkedin.com/in/benedikt-samwer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-hover transition-colors"
+            >
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
@@ -256,7 +287,24 @@ const Landing = () => {
             <FileText className="h-4 w-4 text-primary" />
             <span>KV Billing MVP</span>
           </div>
-          <p>Built for German outpatient practices</p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://samwer.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              samwer.ai
+            </a>
+            <a
+              href="https://linkedin.com/in/benedikt-samwer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </footer>
     </div>
